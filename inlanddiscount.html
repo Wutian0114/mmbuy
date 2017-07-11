@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>国内折扣</title>
+
+    <link rel="stylesheet" href="./libs/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet/less" href="./css/common.less">
+    <link rel="stylesheet/less" href="./css/inlanddiscount.less">
+    <script src="./libs/less/less.js"></script>
+
+    <!--模板-->
+    <script type="text/html" id="product-list-template">
+        {{each result as value i}}
+            <div class="product-item">
+                <div class="product-img">
+                    {{#value.productImg}}
+                </div>
+                <div class="title">{{value.productName}}</div>
+                <div class="price">{{value.productPrice}}</div>
+                <div class="some-info">
+                    <span>{{value.productFrom}} | {{value.productTime}}</span>
+                </div>
+        </div>
+        {{/each}}
+        
+    </script>
+
+</head>
+
+<body>
+    <!--头部-->
+    <header id="header" class="back"></header>
+
+    <!--商品列表-->
+    <section id="product-list">
+    </section>
+
+    <!--加载图标-->
+    <div id="loading-img">
+        <img src="./images/loading.gif" alt="加载图标">
+    </div>
+    <div id="loading-over">全部加载完成</div>
+    <!--底部-->
+    <footer id="footer"></footer>
+</body>
+<script src="./libs/jquery/jquery.js"></script>
+<script src="./libs/bootstrap/js/bootstrap.js"></script>
+<script src="./libs/template/template.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/inlanddiscount.js"></script>
+
+</html>

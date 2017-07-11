@@ -1,0 +1,105 @@
+@import url(color.less);
+
+/*标题列表*/
+#baicai-title {
+    
+    overflow: hidden;
+    >ul {
+        list-style: none;
+        height: 40px;
+        padding: 0;
+        >li {
+            float: left;
+            height: 40px;
+            width: 100px;
+            >a {
+                display: block;
+                height: 40px;
+                text-align: center;
+                color: #000;
+                line-height:40px;
+                position: relative;
+            }
+            >a.active {
+                color: red;
+            }
+            >a.active::before {
+                content: "";
+                width: 100px;
+                height: 3px;
+                background-color: red;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
+        }
+    }
+}
+
+/*商品列表*/
+#baicai-product-list {
+    >.product-item {
+        padding: 10px;
+        display: flex;
+        border-bottom: 1px solid @border-color;
+        >.product-img {
+            flex: 1;
+            
+            img {
+                width: 100%;
+            }
+        }
+        >.product-info {
+            flex: 3;
+            padding-left: 10px;
+            >.name {
+                font-weight: bold;
+            }
+            >.price {
+                font-size: 16px;
+                color: red;
+                >i, em {
+                    font-size: 14px;
+                    font-style: normal;
+                }
+                >em {
+                    font-size: 12px;
+                    margin-left: 10px;
+                }
+                >del {
+                    font-size: 12px;
+                    color: #ccc;
+                    margin-left: 10px;
+                }
+
+            }
+            >.coupon {
+                float: left;
+                font-size: 12px;
+                >a {
+                    padding: 5px;
+                    border: 1px dashed red;
+                    color: red;
+                    margin: 10px 0;
+                    display: block;
+                }
+                >.bar {
+                    i,b {
+                        font-style: normal;
+                        font-weight: normal;
+                    }
+                }
+            }
+            >.buy-href {
+                float: right;
+                >a {
+                    display: block;
+                    padding: 10px 5px;
+                    background-color: red;
+                    color: #fff;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+}

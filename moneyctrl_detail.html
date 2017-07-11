@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>省钱控商品详情</title>
+
+    <link rel="stylesheet" href="./libs/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet/less" href="./css/common.less">
+    <link rel="stylesheet/less" href="./css/moneyctrl_detail.less">
+    <script src="./libs/less/less.js"></script>
+
+    <!--模板-->
+    <script type="text/html" id="product-detail-template">
+        <div class="title">{{result[0].productName}}</div>
+        <div class="price">{{result[0].productPinkage}}</div>
+        <div class="some-info">
+            <span>{{result[0].productFrom}}</span>
+            <span>{{result[0].productTime}}</span>
+            <span>{{result[0].productTips}}</span>
+        </div>
+        <div class="main-info">
+            {{#result[0].productImgSm}}
+            <p>{{result[0].productInfo2}}</p>
+            
+        </div>
+        <div class="big-img">
+            {{#result[0].productImg2}}
+        </div>
+        <a href="#" class="buy-btn">前往购买</a>
+    </script>
+
+</head>
+
+<body>
+    <!--头部-->
+    <header id="header" class="back"></header>
+
+    <!--商品详细信息-->
+    <div id="detail-info"></div>
+
+    <div id="erweima">
+        <img src="./images/mmbweixin2.png" alt="二维码">
+    </div>
+
+    <!--评论-->
+    <div id="comment"></div>
+
+    <!--底部-->
+    <footer id="footer"></footer>
+</body>
+<script src="./libs/jquery/jquery.js"></script>
+<script src="./libs/bootstrap/js/bootstrap.js"></script>
+<script src="./libs/template/template.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/moneyctrl_detail.js"></script>
+
+</html>

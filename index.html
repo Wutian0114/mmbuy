@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买首页</title>
+
+    <link rel="stylesheet" href="./libs/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet/less" href="./css/common.less">
+    <link rel="stylesheet/less" href="./css/index.less">
+    <script src="./libs/less/less.js"></script>
+
+    <!--模板-->
+    <!--菜单列表-->
+    <script type="text/html" id="menu-template">
+        {{each result as value i }}
+            <div class="col-xs-3">
+                <a href="{{value.titlehref}}">
+                    {{#value.img}}
+                    <p>{{value.name}}</p>
+                </a>
+            </div>
+        {{/each}}
+    </script>
+    <!--商品列表-->
+    <script type="text/html" id = "product-template">
+        {{each result as value i }}
+            <div class="media">
+                <div class="media-left"> 
+                    <a href="#"> 
+                        {{#value.productImg2}} 
+                    </a> 
+                </div>
+                <div class="media-body">
+                    <div class="title-info">{{value.productName}} <span>{{value.productPinkage}}</span></div>
+                    <div class="other-info">
+                        {{value.productFrom}}|{{value.productTime}} <span>{{value.productComCount}}</span>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+    </script>
+</head>
+
+<body>
+    <!--头部-->
+    <header id="header"></header>
+
+    <!--搜索-->
+    <section id="search"></section>
+
+    <!--菜单导航-->
+    <section id="nav">
+        <div class="row"></div>
+    </section>
+
+    <!--推荐-->
+    <section id="recommend">
+        <div class="recommend-title">
+            <a href="#">超值折扣推荐</a>
+        </div>
+        <div class="recommend-list"></div> 
+        <div class="recommend-more">
+            <a href="#">更多优惠信息>></a>
+        </div>
+        <div class="recommend-title">
+            <a href="#">品牌排行</a>
+        </div>
+    </section>
+
+    <!--底部-->
+    <footer id="footer"></footer>
+
+</body>
+<script src="./libs/jquery/jquery.js"></script>
+<script src="./libs/bootstrap/js/bootstrap.js"></script>
+<script src="./libs/template/template.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/index.js"></script>
+</html>

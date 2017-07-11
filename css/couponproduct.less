@@ -1,0 +1,48 @@
+@import url(color.less);
+
+/*优惠券商品列表*/
+#title-tip {
+    >p {
+        color: #ccc;
+        text-align: center;
+        line-height: 40px;
+        font-size: 16px;
+        margin: 0;
+    }
+}
+#coupon-product-list {
+    >.media {
+        padding: 10px;
+        border-top: 1px solid @border-color;
+        border-bottom: 1px solid @border-color;
+        margin: 0;
+        >.media-left {
+            a {
+                img {
+                    width: 140px;
+                }
+            }
+        }
+        >.media-body {
+            position: relative;
+            .media-heading {
+                padding-right: 10px;
+            }
+            >p.time {
+                color: @title-color;
+                font-size: 12px;
+                margin-top: 10px;
+            }
+            .more-btn {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+                width: 12px;
+                height: 18px;
+                background: url("../images/right.png") no-repeat;
+                background-size: 12px 18px;
+            }
+        }
+    }
+}

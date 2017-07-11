@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>优惠券</title>
+
+    <link rel="stylesheet" href="./libs/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet/less" href="./css/common.less">
+    <link rel="stylesheet/less" href="./css/coupon.less">
+    <script src="./libs/less/less.js"></script>
+
+    <!--模板-->
+    <script type="text/html" id="coupon-title-template">
+        {{each result as value i}}
+            <div class="col-xs-4">
+                <a href="{{value.couponLink}}?couponid={{value.couponId}}">
+                    <div class="title-img">
+                        <img src="{{value.couponImg}}" alt="">
+                    </div>
+                    <p>{{value.couponTitle}}</p>
+                </a>
+            </div>
+        {{/each}}
+    </script>
+</head>
+
+<body>
+    <!--头部-->
+    <header id="header" class="back"></header>
+
+    <!--优惠券标题列表-->
+    <section id="coupon-title-list">
+        <div class="row">
+        </div>
+    </section>
+
+    <!--底部-->
+    <footer id="footer"></footer>
+
+</body>
+<script src="./libs/jquery/jquery.js"></script>
+<script src="./libs/bootstrap/js/bootstrap.js"></script>
+<script src="./libs/template/template.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/coupon.js"></script>
+
+</html>

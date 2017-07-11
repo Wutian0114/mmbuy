@@ -1,0 +1,124 @@
+@import url(color.less);
+
+//产品详情页样式
+
+/*路径导航*/
+#detail-nav {
+    >.breadcrumb {
+        background-color: #f9f9f9;
+        >li {
+            >a {
+                color: #5a5a5a;
+            }
+        }
+        >li:nth-last-of-type(-n+2)::before {
+            content: ">";
+
+        }
+    }
+}
+
+/*商品详细信息*/
+#detail-info {
+    >.main-info {
+        position: relative;
+        text-align: center;
+        >.collection {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            right: 25px;
+            top: 0;
+            >img {
+                width: 100%;
+            }
+        }
+        
+        >p {
+            color: #000;
+            text-align: left;
+            padding: 10px;
+        }
+    }
+    >.buy-btn {
+        display: block;
+        height: 35px;
+        line-height: 35px;
+        background-color: @title-color;
+        color: #fff;
+        text-align: center;
+        border-top: 1px solid @border-color;
+        border-bottom: 1px solid @border-color;
+        position: relative;
+    }
+    >.buy-btn::before {
+        content:'';
+        width: 12px;
+        height: 5px;
+        position: absolute;
+        top: 33px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: url("../images/tab_ar.png") no-repeat;
+        background-size: 12px 5px;
+    }
+    >.bj-table {
+        margin-top: 10px;
+    }
+    >.tip-info {
+        padding: 10px;
+        color: #ccc;
+    }
+}
+
+/*评价*/
+#comment {
+    >.title {
+        padding: 10px;
+        background-color: #dbdbdb;
+        border-top: 2px solid #7a7a7a;
+        text-align: center;
+    }
+    >.comment-container {
+        padding: 10px;
+        >.comment-item {
+            font-size: 12px;
+            color: #666695;
+            border-bottom: 1px solid @border-color;
+            margin-bottom: 10px;
+            >.item-title {
+                >span:first-of-type {
+                    float: left;
+                }
+                >span:last-of-type {
+                    float: right;
+                }
+            }
+            >.item-content {
+                color: #000;
+                font-size: 14px;
+                overflow: hidden;
+                height: 60px;
+                margin: 10px 0;
+            }
+            >.item-replay {
+                color: #666695;
+            }
+        }
+    }
+
+    >.comment-more {
+        padding: 10px;
+        >a {
+            display: block;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+            color: #5a5a5a;
+            background-color:#e6e6e6;
+            border-radius: 5px;
+            border: 1px solid @border-color;
+        }
+    }
+    
+}

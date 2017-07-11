@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>品牌大全</title>
+
+    <link rel="stylesheet" href="./libs/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet/less" href="./css/common.less">
+    <link rel="stylesheet/less" href="./css/brandTitle.less">
+    <script src="./libs/less/less.js"></script>
+
+    <!--模板-->
+    <script type="text/html" id="brands-ul-template">
+        {{each result as value i}}
+            <li><a href="brandDetail.html?brandtitleid={{value.brandTitleId}}">{{value.brandTitle}}</a></li>
+        {{/each}}
+    </script>
+
+</head>
+
+<body>
+    <!--头部-->
+    <header id="header"></header>
+
+    <!--搜索-->
+    <section id="search"></section>
+
+    <!--路径导航-->
+    <section id="route-nav">
+        <ol class="breadcrumb">
+            <li><a href="index.html">首页</a></li>
+            <li class="active">品牌大全</li>
+        </ol>
+    </section>
+
+    <!--品牌排行-->
+    <section id="brand-list">
+        <div class="brand-title">热门品牌排行</div>
+
+        <div class="brands">
+            <ul></ul>
+        </div>
+    </section>
+
+    <!--底部-->
+    <footer id="footer"></footer>
+
+</body>
+<script src="./libs/jquery/jquery.js"></script>
+<script src="./libs/bootstrap/js/bootstrap.js"></script>
+<script src="./libs/template/template.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/brandTitle.js"></script>
+
+</html>

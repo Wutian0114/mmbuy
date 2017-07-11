@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>白菜价-淘宝内务劵</title>
+
+    <link rel="stylesheet" href="./libs/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet/less" href="./css/common.less">
+    <link rel="stylesheet/less" href="./css/baicaijia.less">
+    <script src="./libs/less/less.js"></script>
+
+    <!--模板-->
+    <!--标题列表-->
+    <script type="text/html" id="list-template">
+        {{each result as value i}}
+        <li><a href="#" data-title-id="{{value.titleId}}">{{value.title}}</a></li>
+        {{/each}}
+    </script>
+    <!--商品列表-->
+    <script type="text/html" id="product-list-template">
+        {{each result as value i}}
+        <div class="product-item">
+            <div class="product-img">
+                {{#value.productImg}}
+            </div>
+            <div class="product-info clearfix">
+                <div class="name">{{#value.productName}}</div>
+                <div class="price">{{#value.productPrice}}</div>
+                <div class="coupon">
+                    {{#value.productCoupon}}
+                    {{#value.productCouponRemain}}
+                </div>
+                <div class="buy-href">{{#value.productHref}}</div>
+            </div>
+        </div>
+        {{/each}}
+
+    </script>
+</head>
+
+<body>
+    <!--头部-->
+    <header id="header" class="back"></header>
+
+    <!--分类标题-->
+    <section id="baicai-title">
+        <ul></ul>
+    </section>
+
+    <!--商品列表-->
+    <section id="baicai-product-list">
+    </section>
+
+    <!--底部-->
+    <footer id="footer"></footer>
+
+</body>
+<script src="./libs/jquery/jquery.js"></script>
+<script src="./libs/bootstrap/js/bootstrap.js"></script>
+<script src="./libs/template/template.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/baicaijia.js"></script>
+
+</html>

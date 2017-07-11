@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品列表</title>
+    <link rel="stylesheet" href="./libs/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet/less" href="./css/common.less">
+    <link rel="stylesheet/less" href="./css/product_list.less">
+    <script src="./libs/less/less.js"></script>
+
+    <!--模板-->
+    <!--商品列表-->
+    <script type="text/html" id = "product-template">
+        {{each result as value i }}
+            <div class="media">
+                <div class="media-left"> 
+                    <a href="product_detail.html?productid={{value.productId}}"> 
+                        {{#value.productImg}} 
+                    </a> 
+                </div>
+                <div class="media-body">
+                    <div class="title-info">{{value.productName}} <span>{{value.productPrice}}</span></div>
+                    <div class="other-info">
+                        {{value.productQuote}} <span>{{value.productCom}}</span>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+    </script>
+</head>
+<body>
+    <!--头部-->
+    <header id="header"></header>
+
+    <!--搜索-->
+    <section id="search"></section>
+
+    <!--商品列表-->
+    <section id="product">
+        <div class="product-list"></div>
+
+        <div class="button-list">
+            <div class="prevBtn">
+                <a href="#">上一页</a>
+            </div>
+            <div class="selectBtn">
+                <select></select>
+            </div>
+            <div class="nextBtn">
+                <a href="#">下一页</a>
+            </div>
+        </div>
+    </section>
+
+    <!--底部-->
+    <footer id="footer"></footer>
+</body>
+<script src="./libs/jquery/jquery.js"></script>
+<script src="./libs/bootstrap/js/bootstrap.js"></script>
+<script src="./libs/template/template.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/product_list.js"></script>
+</html>

@@ -1,0 +1,60 @@
+@import url(color.less);
+
+/*路径导航*/
+#route-nav {
+    >ol {
+        border-top: 1px solid @border-color;
+        border-bottom: 1px solid @border-color;
+        >li {
+            >a {
+                color: #000;
+            }
+        }
+        >li.active::before {
+            content: ">";
+        }
+    }
+}
+
+/*热门品牌排行*/
+#brand-list {
+    padding: 10px;
+    background-color: @border-color;
+    >.brand-title {
+        height: 40px;
+        line-height: 40px;
+        border: 1px solid #ccc;
+        color: #874604;
+        padding-left: 10px;
+        font-size: 16px;
+    }
+    >.brands {
+        >ul {
+            padding: 0;
+            list-style: none;
+            >li {
+                >a {
+                    display: block;
+                    height: 50px;
+                    line-height: 50px;
+                    color: #000;
+                    font-size: 16px;
+                    font-weight: bold;
+                    position: relative;
+                    border-bottom: 1px solid #ccc;
+                }
+                >a::before {
+                    content: '';
+                    width: 30px;
+                    height: 7px;
+                    position: absolute;
+                    top: 50%;
+                    right: 10px;
+                    transform: translateY(-50%);
+                    background: url('../images/arrow_down.gif') no-repeat;
+                    background-size: 30px 7px;
+                }
+            }
+        }
+    }
+}

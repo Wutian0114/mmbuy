@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>优惠券详情</title>
+
+    <link rel="stylesheet" href="./libs/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet/less" href="./css/common.less">
+    <link rel="stylesheet/less" href="./css/couponproduct.less">
+    <script src="./libs/less/less.js"></script>
+
+    <!--模板-->
+    <script type="text/html" id="coupon-product-template">
+        {{each result as value i}}
+        <div class="media">
+            <div class="media-left">
+                <a href="#">
+                    {{#value.couponProductImg}}
+                </a>
+            </div>
+            <div class="media-body">
+                <h4 class="media-heading">
+                    {{value.couponProductName}}
+                </h4>
+                <p>{{value.couponProductPrice}}</p>
+                <p class="time">{{value.couponProductTime}}</p>
+                <a class="more-btn" href="#"></a>
+            </div>
+        </div>
+        {{/each}}
+    </script>
+
+</head>
+
+<body>
+    <!--头部-->
+    <header id="header" class="back"></header>
+
+    <!--优惠券商品列表-->
+    <section id="title-tip">
+        <p>-点餐前出示手机中的优惠券，即可享用优惠~</p>
+    </section>
+    <section id="coupon-product-list">
+        
+    </section>
+
+    <!--底部-->
+    <footer id="footer"></footer>
+
+</body>
+<script src="./libs/jquery/jquery.js"></script>
+<script src="./libs/bootstrap/js/bootstrap.js"></script>
+<script src="./libs/template/template.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/couponproduct.js"></script>
+
+</html>

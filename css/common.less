@@ -1,0 +1,143 @@
+//公共样式
+@import url(color.less);
+
+a:hover, a:focus {
+    text-decoration: none;
+}
+
+/*头部样式*/
+#header {
+    height: 50px;
+    background-color: @title-color;
+    position: relative;
+    >.logo {
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        transform: translateY(-50%);
+        height: 25px;
+        width: 186px;
+        >img {
+            width: 100%;
+        }
+    }
+    >.app-download {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        width: 34px;
+        height: 34px;
+        >img{
+            width: 100%;
+        }
+    }
+}
+#header.back {
+    .return-back {
+        position: absolute;
+        top: 50%;
+        left:0;
+        transform: translateY(-50%);
+        width: 50px;
+        height: 50px;
+        padding: 10px;
+        background: url("../images/icon_bar.png") no-repeat;
+        background-position: -96px -7px;
+        background-size: 220px 132px;
+        background-clip: content-box;
+        background-origin: content-box;
+    }
+    >span {
+        color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 16px;
+        
+    }
+}
+
+/*搜索样式*/
+#search {
+    padding: 10px;
+    display: flex;
+    border-bottom: 1px solid @border-color;
+    >input {
+        flex: 1;
+        height: 30px;
+        border: 0;
+        outline: none;
+        padding-left: 15px;
+        background-color: @border-color;
+        border-radius: 15px;
+        margin-right: 10px;
+    }
+    >button {
+        width: 63px;
+        height: 30px;
+        background-color: @title-color;
+        border-radius: 15px;
+        color: #fff;
+        float: right;
+        border: 0;
+        outline: none;
+    }
+}
+
+/*底部*/
+#footer {
+    >.row {
+        margin: 0;
+        padding: 10px 0;
+        >div {
+            padding: 0;
+            >a {
+                display: block;
+                height: 35px;
+                line-height: 35px;
+                text-align: center;
+                font-size: 16px;
+                color: #5a5a5a;
+                border: 1px solid @border-color;
+                border-right: none;
+                position: relative;
+            }
+        }
+        >div:last-of-type {
+            >a::before {
+                content: '';
+                width: 15px;
+                height: 15px;
+                background: url("../images/top.png") no-repeat;
+                background-size: 15px 15px;
+                position: absolute;
+                top: 50%;
+                left: 8px;
+                transform: translateY(-50%);
+            }
+        }
+    }
+    >.footer-info {
+        text-align: center;
+        margin: 10px 0;
+        >p {
+            margin: 0;
+            >a {
+                color: #ff0000;
+            }
+        }
+        
+    }
+}
+
+/*清除浮动*/
+.clearfix::after {
+    content:'';
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+    clear: both;
+}

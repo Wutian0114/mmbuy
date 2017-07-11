@@ -1,0 +1,175 @@
+@import url(color.less);
+
+/*路径导航*/
+#route-nav {
+    >ol {
+        border-top: 1px solid @border-color;
+        border-bottom: 1px solid @border-color;
+        margin: 0;
+        >li {
+            font-size: 16px;
+            >a {
+                color: #000;
+                
+            }
+        }
+        >li:nth-last-of-type(-n+2)::before {
+            content: ">";
+        }
+    }
+}
+
+/*十大品牌列表*/
+.top-title {
+    height: 40px;
+    line-height: 40px;
+    padding-left: 10px;
+    color: #a24604;
+    font-weight: bold;
+    font-size: 16px;
+    border-top: 1px solid @border-color;
+    border-bottom: 1px solid @border-color;
+}
+#top-ten {
+    > ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        >li {
+            >a {
+                display: block;
+                padding: 10px;
+                border-bottom: 1px solid @border-color;
+                position: relative;
+                >.tip {
+                    display: block;
+                    width: 21px;
+                    height: 21px;
+                    line-height: 21px;
+                    text-align: center;
+                    color: #fff;
+                    background-color: @border-color;
+                    position: absolute;
+                    top: 10px;
+                    left: 10px;
+
+                }
+                >.tip.first {
+                    background-color: #f10e0e;
+                } 
+                >.tip.second {
+                    background-color: #ff9314;
+                } 
+                >.tip.third {
+                    background-color: #8adf5b;
+                } 
+                >.name {
+                    padding-left: 35px;
+                    color: #000;
+                }
+                >.info {
+                    padding-left: 35px;
+                    color: @border-color;
+                    font-size: 12px;
+                }
+            }
+            >a::before {
+                content: "";
+                width: 12px;
+                height: 18px;
+                position: absolute;
+                top: 50%;
+                right: 10px;
+                transform: translateY(-50%);
+                background: url("../images/right.png") no-repeat;
+                background-size: 12px 18px;
+            }
+        }
+    }
+}
+
+/*销量列表*/
+#top-sale {
+    >.sale-list {
+         >.media {
+            padding: 10px;
+            >.media-left {
+                img {
+                    width: 99px;
+                    height: 100px;
+                }
+            }
+            >.media-body {
+                position: relative;
+                >.title-info {
+                    font-size: 16px;
+                    color: #333;
+                    height: 66px;
+                    overflow: hidden;
+                    >p {
+                        color:@title-color;
+                    }
+                }
+                >.other-info {
+                    position: absolute;
+                    bottom: 10px;
+                    color: #a1a1a1;
+                    width: 100%;
+                    >span {
+                        margin-left: 10px;
+                        position: relative;
+                        padding-left: 15px;
+
+                        width: 85px;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                    >span::before {
+                        content: "";
+                        width: 15px;
+                        height: 15px;
+                        background: url("../images/ic_comment.png") no-repeat;
+                        background-size: 15px 15px;
+                        position: absolute;
+                        left: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*销量商品的评论*/
+#top-comment {
+    >.comment {
+        padding: 10px;
+        >.item-header {
+            display: flex;
+            >.item-img {
+                flex: 1;
+            }
+            >.item-name {
+                flex: 2;
+                color: #a1a1a1;
+            }
+
+        }
+        >.item-content {
+            border: 1px solid @border-color;
+            padding: 10px;
+            >.comment-title {
+                >span:last-of-type {
+                    float: right;
+                    color: #a1a1a1;
+                    font-size: 12px;
+                }
+            }
+            >.comment-content {
+                margin-top: 10px;
+            }
+        }
+    }
+}

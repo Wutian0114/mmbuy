@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买分类</title>
+
+    <link rel="stylesheet" href="./libs/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet/less" href="./css/common.less">
+    <link rel="stylesheet/less" href="./css/category.less">
+    <script src="./libs/less/less.js"></script>
+
+    <!--模板-->
+    <!--分类标题-->
+    <script type="text/html" id="category-title-template">
+        {{each result as value i}}
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingOne">
+                    <h4 class="panel-title">
+                        <a class="collapsed" data-title-id="{{value.titleId}}" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse{{i}}" aria-expanded="true" aria-controls="collapseOne">
+                            {{value.title}}
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse{{i}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+                        <div class="row"></div>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+    </script>
+    <!--分类内容-->
+    <script type="text/html" id="category-content-template">
+        {{each result as value i}}
+            <div class="col-xs-4"><a href="product_list.html?categoryid={{value.categoryId}}">{{value.category}}</a></div>
+        {{/each}}
+    </script>
+</head>
+
+<body>
+    <!--头部-->
+    <header id="header"></header>
+
+    <!--搜索-->
+    <section id="search"></section>
+
+    <!--分类选项-->
+    <div id="category">
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true"></div>
+    </div>
+
+    <!--底部-->
+    <footer id="footer"></footer>
+
+</body>
+<script src="./libs/jquery/jquery.js"></script>
+<script src="./libs/bootstrap/js/bootstrap.js"></script>
+<script src="./libs/template/template.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/category.js"></script>
+</html>

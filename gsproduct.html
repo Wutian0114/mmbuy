@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>凑单品</title>
+
+    <link rel="stylesheet" href="./libs/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet/less" href="./css/common.less">
+    <link rel="stylesheet/less" href="./css/gsproduct.less">
+    <script src="./libs/less/less.js"></script>
+
+    <!--模板-->
+    <!--店铺列表-->
+    <script type="text/html" id="shop-list-template">
+        {{each result as value i}}
+        <li><a href="#" data-shop-id="{{value.shopId}}">{{value.shopName}}</a></li>
+        {{/each}}
+    </script>
+    <!--区域列表-->
+    <script type="text/html" id="area-list-template">
+        {{each result as value i}}
+        <li><a href="#" data-area-id="{{value.areaId}}">{{value.areaName}}</a></li>
+        {{/each}}
+    </script>
+    <!--商品列表-->
+    <script type="text/html" id="product-list-template">
+        {{each result as value i}}
+        <div class="col-xs-6">
+            <div class="product-img">
+                <img src="{{value.productImg}}">
+            </div>
+            <div class="product-title">{{value.productName}}</div>
+            <div class="product-price">{{value.productPrice}}</div>
+        </div>
+        {{/each}}
+        
+    </script>
+
+</head>
+
+<body>
+    <!--头部-->
+    <header id="header" class="back"></header>
+
+    <!--商品列表-->
+    <section id="product-list">
+        <div class="title-select">
+            <div class="shop"></div>
+            <div class="area"></div>
+        </div>
+        <ul class="shop-list"></ul>
+        <ul class="area-list"></ul>
+        <div class="product-content">
+            <div class="row">
+            </div>
+        </div>
+    </section>
+
+    <!--底部-->
+    <footer id="footer"></footer>
+
+</body>
+<script src="./libs/jquery/jquery.js"></script>
+<script src="./libs/bootstrap/js/bootstrap.js"></script>
+<script src="./libs/template/template.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/gsproduct.js"></script>
+
+</html>

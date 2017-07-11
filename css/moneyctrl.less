@@ -1,0 +1,88 @@
+@import url(color.less);
+
+//省钱控样式
+/*商品列表*/
+#product {
+    >.product-list {
+        >.media {
+            padding: 10px;
+            >.media-left {
+                img {
+                    width: 99px;
+                    height: 100px;
+                }
+            }
+            >.media-body {
+                position: relative;
+                >.title-info {
+                    font-size: 16px;
+                    color: #333;
+                    height: 66px;
+                    overflow: hidden;
+                    >span {
+                        color:@title-color;
+                        display: block;
+                    }
+                }
+                >.other-info {
+                    position: absolute;
+                    bottom: 10px;
+                    color: #a1a1a1;
+                    width: 100%;
+                    >span {
+                        float: right;
+                        position: relative;
+                        padding-left: 15px;
+
+                        width: 85px;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                    >span::before {
+                        content: "";
+                        width: 15px;
+                        height: 15px;
+                        background: url("../images/ic_comment.png") no-repeat;
+                        background-size: 15px 15px;
+                        position: absolute;
+                        left: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                }
+            }
+        }
+    }
+
+    >.button-list {
+        display: flex;
+        background-color: #f2f2f2;
+        >div {
+            flex: 1;
+            padding: 20px 10px;
+            >a {
+                
+                float: left;
+                padding: 10px 20px;
+                text-align: center;
+                background-color: #ebebeb;
+                border: 1px solid @border-color;
+                border-radius: 10px;
+            }
+            
+            >select {
+                width: 100px;
+                height: 30px;
+                padding-left: 35px;
+            }
+        }
+        >div.nextBtn {
+            >a {
+                float: right;
+            }
+        }
+        
+    }
+}
+

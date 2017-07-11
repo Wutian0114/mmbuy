@@ -1,0 +1,51 @@
+@import url(color.less);
+
+/*国内折扣商品列表*/
+#product-list {
+    display: flex;
+    flex-wrap: wrap;
+    >.product-item {
+        width: 50%;
+        border: 1px solid @border-color;
+        padding: 10px;
+        >.product-img {
+            width: 140px;
+            height: 140px;
+            margin: 0 auto;
+            >img {
+                width: 100%;
+            }
+        }
+        
+        >.title {
+            height: 40px;
+            overflow: hidden;
+            font-weight: bold;
+        }
+        >.price {
+            color: #ff871f;
+        }
+        >.some-info {
+            span {
+                font-size: 12px;
+                color: #ccc;
+            }
+        }
+    }
+}
+
+/*加载图标*/
+#loading-img {
+    width: 32px;
+    height: 32px;
+    margin: 0 auto;
+    >img {
+        width: 100%;
+    }
+}
+
+/*全部加载完成*/
+#loading-over {
+    text-align: center;
+    display: none;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品详情</title>
+
+    <link rel="stylesheet" href="./libs/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet/less" href="./css/common.less">
+    <link rel="stylesheet/less" href="./css/product_detail.less">
+    <script src="./libs/less/less.js"></script>
+
+    <!--模板-->
+    <script type="text/html" id="comment-item-template">
+    {{each result as value i}}
+        <div class="comment-item">
+            <div class="item-title clearfix">
+                <span>{{value.comName}}</span>
+                <span>{{value.comTime}}</span>
+            </div>
+            <div class="item-form">{{value.comFrom}}</div>
+            <div class="item-content">{{value.comContent}}</div>
+            <a class="item-replay">回复</a>
+        </div>
+    {{/each}}
+    </script>
+</head>
+
+<body>
+    <!--头部-->
+    <header id="header"></header>
+
+    <!--搜索-->
+    <section id="search"></section>
+
+    <!--路径导航-->
+    <div id="detail-nav">
+        <ol class="breadcrumb">
+            <li><a href="index.html">首页</a></li>
+        </ol>
+    </div>
+
+    <!--商品详细信息-->
+    <div id="detail-info">
+        <div class="main-info">
+            <a class="collection">
+                <img src="./images/sc.jpg" alt="收藏">
+            </a>
+        </div>
+        <a href="#" class="buy-btn">比价购买</a>
+        <div class="bj-table"></div>
+        <div class="tip-info">
+            *实际价格一官网实时为准，我们提供的价格可能有数小时或数天的延迟。
+        </div>
+    </div>
+
+    <!--评价-->
+    <div id="comment">
+        <div class="title">优选网友评价</div>
+        <div class="comment-container"></div>
+        <div class="comment-more">
+            <a href="javascript:;">查看更多评价</a>
+        </div>
+    </div>
+
+    <!--底部-->
+    <footer id="footer"></footer>
+</body>
+<script src="./libs/jquery/jquery.js"></script>
+<script src="./libs/bootstrap/js/bootstrap.js"></script>
+<script src="./libs/template/template.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/product_detail.js"></script>
+
+</html>

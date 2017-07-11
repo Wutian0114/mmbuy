@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>品牌大全</title>
+
+    <link rel="stylesheet" href="./libs/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet/less" href="./css/common.less">
+    <link rel="stylesheet/less" href="./css/brandDetail.less">
+    <script src="./libs/less/less.js"></script>
+
+    <!--模板-->
+    <!--品牌列表-->
+    <script type="text/html" id="top-ten-list-template">
+        {{each result as value i}}
+        <li>
+            <a href="#">
+                    <span class="tip">{{i+1}}</span>
+                    <div class="name">{{value.brandName}}</div>
+                    <div class="info">{{value.brandInfo}}</div>
+                </a>
+        </li>
+        {{/each}}
+    </script>
+    <!--销量列表-->
+    <script type="text/html" id="top-sale-list-template">
+        {{each result as value i }}
+        <div class="media">
+            <div class="media-left">
+                <a href="#"> 
+                        {{#value.productImg}} 
+                    </a>
+            </div>
+            <div class="media-body">
+                <div class="title-info">{{value.productName}}
+                    <p>{{value.productPrice}}</p>
+                </div>
+                <div class="other-info">
+                    {{value.productQuote}} <span>{{value.productCom}}</span>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </script>
+
+</head>
+
+<body>
+    <!--头部-->
+    <header id="header"></header>
+
+    <!--搜索-->
+    <section id="search"></section>
+
+    <!--路径导航-->
+    <section id="route-nav">
+        <ol class="breadcrumb">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="brandTitle.html">品牌大全</a></li>
+            <li class="active"></li>
+        </ol>
+    </section>
+
+    <!--十大品牌列表-->
+    <section id="top-ten">
+        <div class="top-title"></div>
+        <ul></ul>
+    </section>
+
+    <!--十大品牌销量-->
+    <section id="top-sale">
+        <div class="top-title"></div>
+        <div class="sale-list"></div>
+    </section>
+
+    <!--十大品牌销量评论-->
+    <section id="top-comment">
+        <div class="top-title"></div>
+        <div class="comment">
+            <div class="item-header">
+                <div class="item-img"></div>
+                <div class="item-name"></div>
+            </div>
+            <div class="item-content">
+                <div class="comment-title">
+                    <span>用户名</span>
+                    <span>时间</span>
+                </div>
+                <div class="comment-content">
+                    评论内容
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--底部-->
+    <footer id="footer"></footer>
+
+</body>
+<script src="./libs/jquery/jquery.js"></script>
+<script src="./libs/bootstrap/js/bootstrap.js"></script>
+<script src="./libs/template/template.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/brandDetail.js"></script>
+
+</html>
